@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive Weather</title>
+    <script src="main.js" type="module" ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+    </style>
+    <script src="https://kit.fontawesome.com/2bb7525aad.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+   <main>
+       <h1>Responsive Weather APP A PI</h1>
+       <section id="searchbar" class="searchbar">
+            <form id="searchbar__form" class="searchbar__form" role="search">
+                <label for="searchbar__text">Enter a location</label>
+                <input type="text" id="searchbar__text" class="searchbar__text" role="searchbox" size="40" placeholder="City,country">
+                <button id="searchbar__button" class="searchbar__button" title="submit Location" aria-label="submit to retrieve">
+                    <i class="fa fa-search"></i>
+                    <i class="fas fa-sync fa-spin"></i></button>
+            </form>
+       </section>
+       <a href="#currentForcast" class="skip-link">skip to curren conditions</a>
+       <section id="currentForcast" class="currentForcast" role="region" aria-labelledby="currentForcast__location">
+           <h1 id="currentForcast__location" class="currentForcast__location"></h1>
+           <div id="currentForcast__conditions" class="currentForcast__conditions"></div>
+       </section>
+       <a href="##dailyForcast" class="skip-link">skip to six day conditions</a>
+       <nav id="navButtons" class="navButtons">
+           <button id="getLocation" class="button" title="getLocation" aria-label="get the current condition">
+                <i class="fas fa-camera"></i>
+           </button>
+           <button id="home" class="button" title="home" aria-label="get the home condition">home</button>
+           <button id="saveLocation" class="button" title="saveLocation" aria-label="save the current condition">savelocation</button>
+           <button id="units" class="button" title="toggle units" aria-label="toggle nuits between">units</button>
+           <button id="refresh" class="button" title="refresh" aria-label="refresh condition">refresh</button>
+       </nav>
+       <hr>
+       <section id="dailyForcast" class="dailyForcast" role="region" aria-labelledby="dailyForcast__title">
+           <h2 id="dailyForcast__title" class="dailyforcast__title">six day dailyForcast</h2>
+           <div id="dailyForcast__content" class="dailyForcast__content"></div>
+       </section>
+       <p id="confirmation" class="offscreen" aria-live="assertive"></p>
+   </main>
+</body>
+</html>
